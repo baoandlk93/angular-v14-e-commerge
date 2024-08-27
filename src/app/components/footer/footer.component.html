@@ -1,0 +1,66 @@
+<footer class="bg-gray-900 text-gray-400 py-12">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
+      <div class="col-span-2">
+        <div class="mb-4">
+          <img src="https://via.placeholder.com/150" alt="Logo" class="w-8 h-8">
+        </div>
+        <p class="mb-6">
+          Making the world a better place through constructing elegant hierarchies.
+        </p>
+        <div class="flex space-x-4">
+          <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-github"></i></a>
+          <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div>
+        <h6 class="font-semibold text-white mb-4">Solutions</h6>
+        <ul>
+          <li class="mb-2"><a href="#" class="hover:underline">Marketing</a></li>
+          <li class="mb-2"><a href="#" class="hover:underline">Analytics</a></li>
+          <li class="mb-2"><a href="#" class="hover:underline">Commerce</a></li>
+          <li class="mb-2"><a href="#" class="hover:underline">Insights</a></li>
+        </ul>
+      </div>
+      <div>
+        <h6 class="font-semibold text-white mb-4">Support</h6>
+        <ul>
+          <li class="mb-2"><a href="#" class="hover:underline">Pricing</a></li>
+          <li class="mb-2"><a href="#" class="hover:underline">Documentation</a></li>
+          <li class="mb-2"><a href="#" class="hover:underline">Guides</a></li>
+          <li class="mb-2"><a href="#" class="hover:underline">API Status</a></li>
+        </ul>
+      </div>
+      <div>
+        <h6 class="font-semibold text-white mb-4">Company</h6>
+        <ul>
+          <li class="mb-2"><a href="#" class="hover:underline">About</a></li>
+          <li class="mb-2"><a href="#" class="hover:underline">Blog</a></li>
+          <li class="mb-2"><a href="#" class="hover:underline">Jobs</a></li>
+          <li class="mb-2"><a href="#" class="hover:underline">Press</a></li>
+          <li class="mb-2"><a href="#" class="hover:underline">Partners</a></li>
+        </ul>
+      </div>
+      <div>
+        <h6 class="font-semibold text-white mb-4">Legal</h6>
+        <ul>
+          <li class="mb-2"><a href="#" class="hover:underline">Claim</a></li>
+          <li class="mb-2"><a href="#" class="hover:underline">Privacy</a></li>
+          <li class="mb-2"><a href="#" class="hover:underline">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+      <p>&copy; 2020 Your Company, Inc. All rights reserved.</p>
+    </div>
+  </div>
+
+  <!-- Nút Scroll to Top -->
+  <button *ngIf="isVisible" (click)="scrollToTop()" class="fixed bottom-4 right-4 bg-gray-800 text-white rounded-full p-3 shadow-lg hover:bg-gray-700 transition">
+    <i class="fas fa-arrow-up"></i> <!-- Sử dụng biểu tượng mũi tên -->
+  </button>
+
+</footer>

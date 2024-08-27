@@ -1,0 +1,22 @@
+<h2 class="text-center text-2xl font-bold">
+  Todo App
+</h2>
+<div class="flex justify-center">
+  <div class="col-md-8 offset-md-2 space-y-2">
+    <label for="todo" class="block text-sm font-medium leading-6 text-gray-900">Todo</label>
+    <div class="relative mt-2 rounded-md shadow-sm">
+      <input type="text" name="todo" id="todo" class="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900
+    ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600
+     sm:text-sm sm:leading-6" placeholder="Todo" [formControl]="content" (change)="change()">
+    </div>
+    <div class="flex-col space-y-2">
+      <div
+        class="transition rounded-xl text-center text-2xl ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300"
+        (click)="toggleTodo(i)"
+        [class.complete]="todo.complete"
+        *ngFor="let todo of todos; index as i">
+        {{ todo.content }}
+      </div>
+    </div>
+  </div>
+</div>

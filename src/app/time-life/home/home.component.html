@@ -1,0 +1,11 @@
+<h1 class="text-center text-3xl font-bold">Ứng dụng tính thời gian đã sống</h1>
+
+<div class="flex justify-center space-y-5 p-5">
+  <div>
+    <input #inputValue type="text" name="todo" id="todo" class="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900
+    ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600
+     sm:text-sm sm:leading-6" placeholder="dd-MM-yyyy" (change)="onChange(inputValue.value)">
+    <p>{{ output }}</p>
+  </div>
+
+</div>

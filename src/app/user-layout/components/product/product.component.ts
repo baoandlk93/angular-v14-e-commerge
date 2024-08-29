@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Product} from "../../../interfaces/product";
 import {ProductServiceService} from "../../../services/product-service.service";
+import {BehaviorSubject, Observable} from "rxjs";
 
 @Component({
   selector: 'app-product',
@@ -8,7 +9,7 @@ import {ProductServiceService} from "../../../services/product-service.service";
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
-  products: Product[] = []
+  products$: Observable<Product[]> | undefined;
   selectedProduct: any;
 
   constructor(private productService: ProductServiceService) {
@@ -16,19 +17,21 @@ export class ProductComponent implements OnInit {
 
   ngOnInit(): void {
     this.getProducts();
-
   }
 
   openModal(product: any) {
-    this.selectedProduct = product; // Gán sản phẩm được chọn
-    console.log(this.products)
+    this.selectedProduct = product;
+    console.log(this.products$)
   }
+
   onCloseModal() {
-    this.selectedProduct = null; // Đặt về null khi modal đóng
+    this.selectedProduct = null;
   }
 
   getProducts(): void {
-    this.productService.getProducts().subscribe(products => this.products = products);
+    this.productService.getProducts().subscribe(products => {
+      this.products$ = new BehaviorSubject<Product[]>(products.content);
+    });
   }
 
 }
